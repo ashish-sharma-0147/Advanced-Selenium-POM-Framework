@@ -38,8 +38,6 @@ AWS S3 bucket (Optional)
 
 Installing Dependencies/Tools
 
-Raise TechDesk requests. URL: https://techdesk.elsevier.net 
-
 
 # Framework Structure
 The framework has different packages such as:
