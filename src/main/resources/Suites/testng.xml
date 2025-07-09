@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FROST UI Automation Suite" configfailurepolicy="continue">
+	<listeners>
+		<listener class-name="com.qa.listeners.TestListener"></listener>
+		<listener class-name="com.qa.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.qa.listeners.AlterSuiteListener"></listener>
+	</listeners>
+	<test name="UI Test Cases">
+		<!--<parameter name="browser" value="firefox" />
+		<groups>
+			<define name="all">
+				<include name="regression" />
+				<include name="sanity" />
+			</define>
+			<run>
+				<include name="all" />
+			</run>
+		</groups> -->
+		<classes>
+			<class name="com.qa.testcases.LoginPageTest" />
+			<class name="com.qa.testcases.CreateProjectPageTest" />
+			<class name="com.qa.testcases.DashboardPageTest" />
+			<class name="com.qa.testcases.EditTOCPageTest" />
+			<class name="com.qa.testcases.BuildingBlocksPageTest" />
+			<class name="com.qa.testcases.LORpageTest" />
+			<class name="com.qa.testcases.MetaDataPageTest" />
+			<class name="com.qa.testcases.AdministrationPageTest" />
+			<class name="com.qa.testcases.ProjectUsageDashboardPageTest" />
+			<class name="com.qa.testcases.GlossaryPageTest" />
+			<class name="com.qa.testcases.CourseEditorPageTest" />
+			<class name="com.qa.testcases.ExportPageTest" />
+            <class name="com.qa.testcases.AssessmentQuestionDetailsPageTest" />
+		</classes>
+	</test>
+</suite>

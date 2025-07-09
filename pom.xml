@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.elsevier.FrostUIAutomation</groupId>
+	<artifactId>Frost-UI-automation-framework</artifactId>
+	<version>0.0.1</version>
+
+	<name>FROST-UI-automation-framework</name>
+	<url>${application.url}</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<!--<maven.compiler.release>18</maven.compiler.release>-->
+		<testng.version>7.4.0</testng.version>
+		<webdrivermanager.version>5.9.2</webdrivermanager.version>
+		<selenium.java.version>4.25.0</selenium.java.version>
+		<apachepoi.version>5.2.2</apachepoi.version>
+		<apache.tika.core.version>2.9.2</apache.tika.core.version>
+		<apache.tika.parser.version>2.9.2</apache.tika.parser.version>
+		<apache.commons.compress.version>1.26.1</apache.commons.compress.version>
+		<monte.recorder.version>0.7.7.0</monte.recorder.version>
+		<javafaker.version>1.0.2</javafaker.version>
+		<extentreport.version>5.0.9</extentreport.version>
+		<commons.io.version>2.17.0</commons.io.version>
+		<sl4j.version>2.0.7</sl4j.version>
+		<ionetty.version>4.1.77.Final</ionetty.version>
+		<awsdevicefarm.version>2.11.4</awsdevicefarm.version>
+		<project.lombook.version>1.18.22</project.lombook.version>
+		<shadow.sukgu.version>0.1.4.1</shadow.sukgu.version>
+		<commons.csv.version>1.9.0</commons.csv.version>
+		<parallel.execution.mode>NONE</parallel.execution.mode>
+		<parallel.execution.thread.count>0</parallel.execution.thread.count>
+		
+		<xml>${user.dir}/src/main/resources/Suites/testng.xml</xml>
+		<application.url>https://frost-cert.health.elsevier.com/</application.url>
+		<browser>FireFox</browser>
+		<groups></groups>
+		<username></username>
+		<password></password>
+	</properties>
+
+	<dependencies>
+	
+		<dependency>
+   			<groupId>io.netty</groupId>
+    		<artifactId>netty-handler</artifactId>
+    		<version>${ionetty.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.java.version}</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>org.seleniumhq.selenium</groupId>
+    		<artifactId>selenium-server</artifactId>
+    		<version>4.0.0-alpha-2</version>
+		</dependency>
+        
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>javax.mail-api</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${apachepoi.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${apachepoi.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-scratchpad</artifactId>
+			<version>${apachepoi.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.github.stephenc.monte</groupId>
+			<artifactId>monte-screen-recorder</artifactId>
+			<version>${monte.recorder.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>${webdrivermanager.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>${extentreport.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons.io.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>${javafaker.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>devicefarm</artifactId>
+			<version>${awsdevicefarm.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>regions</artifactId>
+			<version>2.11.4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-s3</artifactId>
+			<version>1.11.957</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.aeonbits.owner</groupId>
+			<artifactId>owner</artifactId>
+			<version>1.0.12</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.9</version>
+		</dependency>
+
+		<dependency>
+  			<groupId>org.projectlombok</groupId>
+  			<artifactId>lombok</artifactId>
+  			<version>${project.lombook.version}</version>
+		</dependency>
+
+		<dependency>
+       		<groupId>org.slf4j</groupId>
+       		<artifactId>slf4j-api</artifactId>
+       		<version>${sl4j.version}</version>
+   		</dependency>
+   		
+   		<dependency>
+       		<groupId>org.slf4j</groupId>
+       		<artifactId>slf4j-log4j12</artifactId>
+       		<version>${sl4j.version}</version>
+   		</dependency>
+
+   		<dependency>
+  			<groupId>io.github.sukgu</groupId>
+  			<artifactId>automation</artifactId>
+  			<version>${shadow.sukgu.version}</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>org.apache.commons</groupId>
+		    <artifactId>commons-csv</artifactId>
+    		<version>${commons.csv.version}</version>
+		</dependency>
+		
+		<dependency>
+      		<groupId>org.apache.tika</groupId>
+     		<artifactId>tika-core</artifactId>
+   		 	<version>${apache.tika.core.version}</version>
+    	</dependency>
+    	<dependency>
+      		<groupId>org.apache.tika</groupId>
+      		<artifactId>tika-parsers-standard-package</artifactId>
+      		<version>${apache.tika.parser.version}</version>
+    	</dependency>
+
+    	<dependency>
+      		<groupId>org.apache.commons</groupId>
+      		<artifactId>commons-compress</artifactId>
+      		<version>${apache.commons.compress.version}</version>
+      	</dependency>
+
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>3.1.0</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.0.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.0</version>
+					<configuration>
+             		   <source>1.8</source>
+            		   <target>1.8</target>
+					</configuration>
+				</plugin>
+				<plugin>
+       				<artifactId>maven-surefire-plugin</artifactId>
+        			<version>3.0.0-M5</version>
+        			<configuration>
+						<runOrder>alphabetical</runOrder>
+                    	<forkMode>always</forkMode>
+						<systemPropertyVariables>
+                        	<parallel.execution.mode>${parallel.execution.mode}</parallel.execution.mode>
+							<parallel.execution.thread.count>${parallel.execution.thread.count}</parallel.execution.thread.count>
+							<application.url>${application.url}</application.url>
+							<browser>${browser}</browser>
+							<groups>${groups}</groups>
+							<username>${username}</username>
+							<password>${password}</password>
+                   		 </systemPropertyVariables>
+        				 <suiteXmlFiles>
+        					<suiteXmlFile>${xml}</suiteXmlFile>
+        				 </suiteXmlFiles>
+        			</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.0.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>2.5.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.8.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.7.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-project-info-reports-plugin</artifactId>
+					<version>3.0.0</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+	</build>
+</project>
