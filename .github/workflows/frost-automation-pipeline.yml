@@ -31,6 +31,31 @@ on:
           - "FireFox"
           - "Edge"
           - "Safari"
+      Select_Group:
+        description: "Select the test group/name you want to run"
+        default: ""
+        required: false
+      Parallel_Execution:
+        description: "Select 'Yes' if you want to run test cases in Parallel Mode"
+        required: true
+        type: choice
+        options:
+          - "Yes"
+          - "No"
+      Parallel_Execution_Mode:
+        description: "Please select the Parallel Execution Mode"
+        required: true
+        type: choice
+        options:
+          - "CLASSES"
+          - "METHODS"
+          - "INSTANCES"
+          - "TESTS"
+          - "NONE"
+      Parallel_Execution_Thread_Count:
+        description: "Please select the Parallel Execution Thread Count"
+        default: "1"
+        required: true
 
 jobs:
   frost-pipeline:
@@ -41,6 +66,10 @@ jobs:
       FROST_USERNAME: ${{ inputs.Frost_Username }}
       FROST_PASSWORD: ${{ inputs.Frost_Password }}
       BROWSER: ${{ inputs.Select_Browser }}
+      GROUPS: ${{ inputs.Select_Group }}
+      PARALLEL_EXECUTION: ${{ inputs.Parallel_Execution }}
+      PARALLEL_EXECUTION_MODE: ${{ inputs.Parallel_Execution_Mode }}
+      PARALLEL_EXECUTION_THREAD_COUNT: ${{ inputs.Parallel_Execution_Thread_Count }}
 
     steps:
     - name: Checkout Code
@@ -83,7 +112,11 @@ jobs:
           -Dapplication.url=${{ env.APPLICATION_URL }} \
           -Dusername=${{ env.FROST_USERNAME }} \
           -Dpassword=${{ env.FROST_PASSWORD }} \
-          -Dbrowser=${{ env.BROWSER }}
+          -Dbrowser=${{ env.BROWSER }} \
+          -Dgroups=${{ env.GROUPS }} \
+          -Dparallel.execution=${{ env.PARALLEL_EXECUTION }} \
+          -Dparallel.execution.mode=${{ env.PARALLEL_EXECUTION_MODE }} \
+          -Dparallel.execution.thread.count=${{ env.PARALLEL_EXECUTION_THREAD_COUNT }}
 
     - name: Generate Reports
       run: |
