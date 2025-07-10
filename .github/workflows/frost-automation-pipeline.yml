@@ -1,0 +1,93 @@
+name: Frost Test Automation Pipeline
+
+on:
+  workflow_dispatch: # Trigger the pipeline manually
+    inputs:
+      Branch:
+        description: "Please enter the branch name"
+        default: "main"
+        required: true
+      Select_Environment:
+        description: "Select the Environment which you want to test"
+        default: "https://frost-cert.health.elsevier.com/"
+        required: true
+      Frost_Username:
+        description: "Please enter the username"
+        required: true
+      Frost_Password:
+        description: "Please enter the encrypted password"
+        required: true
+      Select_Browser:
+        description: "Select the browser on which you want to run test"
+        default: "Chrome"
+        required: true
+      Select_Group:
+        description: "Select the test group/name you want to run"
+        default: ""
+        required: false
+      Parallel_Execution:
+        description: "Select 'Yes' if you want to run test cases in Parallel Mode"
+        default: "No"
+        required: true
+      Parallel_Execution_Mode:
+        description: "Please select the Parallel Execution Mode"
+        default: "NONE"
+        required: true
+      Parallel_Execution_Thread_Count:
+        description: "Please select the Parallel Execution Thread Count"
+        default: "1"
+        required: true
+
+jobs:
+  frost-pipeline:
+    runs-on: ubuntu-latest
+
+    env:
+      APPLICATION_URL: ${{ inputs.Select_Environment }}
+      FROST_USERNAME: ${{ inputs.Frost_Username }}
+      FROST_PASSWORD: ${{ inputs.Frost_Password }}
+      BROWSER: ${{ inputs.Select_Browser }}
+      GROUPS: ${{ inputs.Select_Group }}
+      PARALLEL_EXECUTION_MODE: ${{ inputs.Parallel_Execution_Mode }}
+      PARALLEL_EXECUTION_THREAD_COUNT: ${{ inputs.Parallel_Execution_Thread_Count }}
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ inputs.Branch }}
+
+    - name: Set Up Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: 11
+        distribution: adopt
+
+    - name: Install Maven
+      run: sudo apt-get install -y maven
+
+    - name: Build Code
+      run: mvn compile
+
+    - name: Test Execution
+      run: |
+        mvn test \
+          -Dapplication.url=${{ env.APPLICATION_URL }} \
+          -Dusername=${{ env.FROST_USERNAME }} \
+          -Dpassword=${{ env.FROST_PASSWORD }} \
+          -Dbrowser=${{ env.BROWSER }} \
+          -Dgroups=${{ env.GROUPS }} \
+          -Dparallel.execution.mode=${{ env.PARALLEL_EXECUTION_MODE }} \
+          -Dparallel.execution.thread.count=${{ env.PARALLEL_EXECUTION_THREAD_COUNT }}
+
+    - name: Generate Reports
+      run: |
+        mkdir -p TestReports
+        mv target/surefire-reports/testng-results.xml TestReports/
+        mv target/surefire-reports/*.html TestReports/
+
+    - name: Publish HTML Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: TestReports
+        path: TestReports/
