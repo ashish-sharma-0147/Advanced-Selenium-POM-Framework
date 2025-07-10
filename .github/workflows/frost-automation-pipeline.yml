@@ -1,7 +1,7 @@
 name: Frost Test Automation Pipeline
 
 on:
-  workflow_dispatch: # Trigger the pipeline manually
+  workflow_dispatch:
     inputs:
       Branch:
         description: "Please enter the branch name"
@@ -137,7 +137,7 @@ jobs:
         mv target/surefire-reports/*.html TestReports/
 
     - name: Publish HTML Report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3.1.0 # Updated to the latest version
       with:
         name: TestReports
         path: TestReports/
