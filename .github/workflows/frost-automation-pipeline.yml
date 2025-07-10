@@ -44,6 +44,7 @@ on:
           - "No"
       Parallel_Execution_Mode:
         description: "Please select the Parallel Execution Mode"
+        default: "NONE"
         required: true
         type: choice
         options:
@@ -101,6 +102,17 @@ jobs:
         else
           echo "Invalid password: Password should have minimum of 2 characters excluding whitespace"
           exit 1
+        fi
+
+        if [[ "${{ env.PARALLEL_EXECUTION }}" == "No" ]]; then
+          if [[ "${{ env.PARALLEL_EXECUTION_MODE }}" != "NONE" ]]; then
+            echo "Invalid Parallel Execution Mode: Mode should be 'NONE' when Parallel Execution is 'No'"
+            exit 1
+          fi
+          if [[ "${{ env.PARALLEL_EXECUTION_THREAD_COUNT }}" != "1" ]]; then
+            echo "Invalid Thread Count: Thread count should be '1' when Parallel Execution is 'No'"
+            exit 1
+          fi
         fi
 
     - name: Build Code
