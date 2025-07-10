@@ -87,34 +87,6 @@ jobs:
     - name: Install Maven
       run: sudo apt-get install -y maven
 
-    - name: Validate Inputs
-      run: |
-        echo "::add-mask::${{ env.FROST_PASSWORD }}" # Mask the password in logs
-        if [[ "${{ env.FROST_USERNAME }}" =~ ^\\S{2,}$ ]]; then
-          echo "Valid username"
-        else
-          echo "Invalid username: Username should have minimum of 2 characters excluding whitespace"
-          exit 1
-        fi
-
-        if [[ "${{ env.FROST_PASSWORD }}" =~ ^\\S{2,}$ ]]; then
-          echo "Valid password"
-        else
-          echo "Invalid password: Password should have minimum of 2 characters excluding whitespace"
-          exit 1
-        fi
-
-        if [[ "${{ env.PARALLEL_EXECUTION }}" == "No" ]]; then
-          if [[ "${{ env.PARALLEL_EXECUTION_MODE }}" != "NONE" ]]; then
-            echo "Invalid Parallel Execution Mode: Mode should be 'NONE' when Parallel Execution is 'No'"
-            exit 1
-          fi
-          if [[ "${{ env.PARALLEL_EXECUTION_THREAD_COUNT }}" != "1" ]]; then
-            echo "Invalid Thread Count: Thread count should be '1' when Parallel Execution is 'No'"
-            exit 1
-          fi
-        fi
-
     - name: Build Code
       run: mvn compile
 
