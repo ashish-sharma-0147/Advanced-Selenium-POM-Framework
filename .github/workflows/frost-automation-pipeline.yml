@@ -113,3 +113,7 @@ jobs:
       with:
         name: TestReports
         path: TestReports/
+
+    - name: Display TestNG Results in Logs
+      run: |
+        cat TestReports/testng-results.xml
