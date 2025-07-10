@@ -9,8 +9,13 @@ on:
         required: true
       Select_Environment:
         description: "Select the Environment which you want to test"
-        default: "https://frost-cert.health.elsevier.com/"
         required: true
+        type: choice
+        options:
+          - "https://frost-dev.health.elsevier.com/"
+          - "https://frost-cert.health.elsevier.com/"
+          - "https://frost-stage.health.elsevier.com/"
+          - "https://frost-prod.health.elsevier.com/"
       Frost_Username:
         description: "Please enter the username"
         required: true
@@ -19,24 +24,13 @@ on:
         required: true
       Select_Browser:
         description: "Select the browser on which you want to run test"
-        default: "Chrome"
         required: true
-      Select_Group:
-        description: "Select the test group/name you want to run"
-        default: ""
-        required: false
-      Parallel_Execution:
-        description: "Select 'Yes' if you want to run test cases in Parallel Mode"
-        default: "No"
-        required: true
-      Parallel_Execution_Mode:
-        description: "Please select the Parallel Execution Mode"
-        default: "NONE"
-        required: true
-      Parallel_Execution_Thread_Count:
-        description: "Please select the Parallel Execution Thread Count"
-        default: "1"
-        required: true
+        type: choice
+        options:
+          - "Chrome"
+          - "FireFox"
+          - "Edge"
+          - "Safari"
 
 jobs:
   frost-pipeline:
@@ -47,9 +41,6 @@ jobs:
       FROST_USERNAME: ${{ inputs.Frost_Username }}
       FROST_PASSWORD: ${{ inputs.Frost_Password }}
       BROWSER: ${{ inputs.Select_Browser }}
-      GROUPS: ${{ inputs.Select_Group }}
-      PARALLEL_EXECUTION_MODE: ${{ inputs.Parallel_Execution_Mode }}
-      PARALLEL_EXECUTION_THREAD_COUNT: ${{ inputs.Parallel_Execution_Thread_Count }}
 
     steps:
     - name: Checkout Code
@@ -66,6 +57,23 @@ jobs:
     - name: Install Maven
       run: sudo apt-get install -y maven
 
+    - name: Validate Inputs
+      run: |
+        echo "::add-mask::${{ env.FROST_PASSWORD }}" # Mask the password in logs
+        if [[ "${{ env.FROST_USERNAME }}" =~ ^\\S{2,}$ ]]; then
+          echo "Valid username"
+        else
+          echo "Invalid username: Username should have minimum of 2 characters excluding whitespace"
+          exit 1
+        fi
+
+        if [[ "${{ env.FROST_PASSWORD }}" =~ ^\\S{2,}$ ]]; then
+          echo "Valid password"
+        else
+          echo "Invalid password: Password should have minimum of 2 characters excluding whitespace"
+          exit 1
+        fi
+
     - name: Build Code
       run: mvn compile
 
@@ -75,10 +83,7 @@ jobs:
           -Dapplication.url=${{ env.APPLICATION_URL }} \
           -Dusername=${{ env.FROST_USERNAME }} \
           -Dpassword=${{ env.FROST_PASSWORD }} \
-          -Dbrowser=${{ env.BROWSER }} \
-          -Dgroups=${{ env.GROUPS }} \
-          -Dparallel.execution.mode=${{ env.PARALLEL_EXECUTION_MODE }} \
-          -Dparallel.execution.thread.count=${{ env.PARALLEL_EXECUTION_THREAD_COUNT }}
+          -Dbrowser=${{ env.BROWSER }}
 
     - name: Generate Reports
       run: |
