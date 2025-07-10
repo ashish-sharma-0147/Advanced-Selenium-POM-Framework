@@ -137,7 +137,7 @@ jobs:
         mv target/surefire-reports/*.html TestReports/
 
     - name: Publish HTML Report
-      uses: actions/upload-artifact@v3.2.0 # Updated to the latest version
+      uses: actions/upload-artifact@v4 # Updated to the latest version
       with:
         name: TestReports
         path: TestReports/
