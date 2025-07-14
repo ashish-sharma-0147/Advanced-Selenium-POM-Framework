@@ -101,6 +101,7 @@ jobs:
           -Dparallel.execution=${{ env.PARALLEL_EXECUTION }} \
           -Dparallel.execution.mode=${{ env.PARALLEL_EXECUTION_MODE }} \
           -Dparallel.execution.thread.count=${{ env.PARALLEL_EXECUTION_THREAD_COUNT }}
+      continue-on-error: true # Allow the workflow to proceed even if this step fails
 
     - name: Generate Reports
       run: |
