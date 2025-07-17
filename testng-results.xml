@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="3" ignored="68" total="76" passed="5" failed="0" skipped="0">
+<testng-results retried="2" ignored="68" total="75" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-17T18:09:22 UTC" name="FROST UI Automation Suite" finished-at="2025-07-17T18:10:16 UTC" duration-ms="53671">
+  <suite started-at="2025-07-17T18:16:23 UTC" name="FROST UI Automation Suite" finished-at="2025-07-17T18:18:09 UTC" duration-ms="105496">
     <groups>
       <group name="regression">
         <method signature="LoginPageTest.InvalidLoginErrorTest()[pri:1, instance:com.qa.testcases.LoginPageTest@4566d049]" name="InvalidLoginErrorTest" class="com.qa.testcases.LoginPageTest"/>
@@ -21,9 +21,9 @@
         <method signature="LoginPageTest.ValidLoginTest()[pri:4, instance:com.qa.testcases.LoginPageTest@4566d049]" name="ValidLoginTest" class="com.qa.testcases.LoginPageTest"/>
       </group> <!-- Login -->
     </groups>
-    <test started-at="2025-07-17T18:09:22 UTC" name="UI Test Cases" finished-at="2025-07-17T18:10:16 UTC" duration-ms="53671">
+    <test started-at="2025-07-17T18:16:23 UTC" name="UI Test Cases" finished-at="2025-07-17T18:18:09 UTC" duration-ms="105496">
       <class name="com.qa.testcases.LoginPageTest">
-        <test-method is-config="true" signature="prepareSuite(java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:22 UTC" name="prepareSuite" finished-at="2025-07-17T18:09:22 UTC" duration-ms="567" status="PASS">
+        <test-method is-config="true" signature="prepareSuite(java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:16:23 UTC" name="prepareSuite" finished-at="2025-07-17T18:16:23 UTC" duration-ms="570" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,28 +34,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareSuite -->
-        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:22 UTC" name="setUpBase" finished-at="2025-07-17T18:09:50 UTC" duration-ms="27721" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=LoginPageTest.InvalidLoginErrorTest()[pri:1, instance:com.qa.testcases.LoginPageTest@4566d049] output={null}]]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[FireFox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBase -->
-        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:22 UTC" name="setUpBase" finished-at="2025-07-17T18:09:50 UTC" duration-ms="27720" status="PASS">
+        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:16:23 UTC" name="setUpBase" finished-at="2025-07-17T18:16:53 UTC" duration-ms="29656" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -76,7 +55,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBase -->
-        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:22 UTC" name="setUpBase" finished-at="2025-07-17T18:09:50 UTC" duration-ms="27729" status="PASS">
+        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:16:23 UTC" name="setUpBase" finished-at="2025-07-17T18:16:53 UTC" duration-ms="29499" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -97,29 +76,28 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBase -->
-        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:50 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:09:50 UTC" duration-ms="41" status="PASS">
+        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:16:23 UTC" name="setUpBase" finished-at="2025-07-17T18:16:53 UTC" duration-ms="29521" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception]]>
               </value>
             </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToLoginPage -->
-        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:50 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:09:50 UTC" duration-ms="43" status="PASS">
-          <params>
-            <param index="0">
+            <param index="1">
               <value>
-                <![CDATA[public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Exception]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginPageTest.InvalidLoginErrorTest()[pri:1, instance:com.qa.testcases.LoginPageTest@4566d049] output={null}]]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FireFox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigateToLoginPage -->
-        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:50 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:09:50 UTC" duration-ms="34" status="PASS">
+        </test-method> <!-- setUpBase -->
+        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:16:53 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:16:53 UTC" duration-ms="36" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -130,39 +108,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToLoginPage -->
-        <test-method retried="true" signature="InvalidLoginErrorTest()[pri:1, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:50 UTC" name="InvalidLoginErrorTest" finished-at="2025-07-17T18:09:51 UTC" duration-ms="861" status="SKIP">
-          <exception class="java.lang.Exception">
-            <message>
-              <![CDATA[Element [[FirefoxDriver: firefox on linux (a028180a-4c61-42b3-86e2-a9a26596bf88)] -> xpath: //button[normalize-space()='Login']] is not clickable because: java.lang.Exception: Not able to find element ' xpath: //button[normalize-space()='Login']] '. Reason: null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Exception: Element [[FirefoxDriver: firefox on linux (a028180a-4c61-42b3-86e2-a9a26596bf88)] -> xpath: //button[normalize-space()='Login']] is not clickable because: java.lang.Exception: Not able to find element ' xpath: //button[normalize-space()='Login']] '. Reason: null
-at com.qa.util.DriverActions.click(DriverActions.java:105)
-at com.qa.pages.LoginPage.clickLogin(LoginPage.java:56)
-at com.qa.pages.LoginPage.InvalidLogin(LoginPage.java:46)
-at com.qa.testcases.LoginPageTest.InvalidLoginErrorTest(LoginPageTest.java:38)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:829)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Exception -->
+        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:16:53 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:16:53 UTC" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- InvalidLoginErrorTest -->
-        <test-method retried="true" signature="NeedHelpRedirectTest()[pri:3, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:50 UTC" name="NeedHelpRedirectTest" finished-at="2025-07-17T18:10:11 UTC" duration-ms="21376" status="SKIP">
+        </test-method> <!-- navigateToLoginPage -->
+        <test-method retried="true" signature="NeedHelpRedirectTest()[pri:3, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:16:53 UTC" name="NeedHelpRedirectTest" finished-at="2025-07-17T18:17:14 UTC" duration-ms="20969" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Forgot Password] but found []]]>
@@ -201,24 +158,30 @@ at java.base/java.lang.Thread.run(Thread.java:829)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NeedHelpRedirectTest -->
-        <test-method retried="true" signature="LoginWithoutCredentialsErrorTest()[pri:2, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:50 UTC" name="LoginWithoutCredentialsErrorTest" finished-at="2025-07-17T18:09:51 UTC" duration-ms="874" status="SKIP">
-          <exception class="java.lang.AssertionError">
+        <test-method retried="true" signature="InvalidLoginErrorTest()[pri:1, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:16:53 UTC" name="InvalidLoginErrorTest" finished-at="2025-07-17T18:17:14 UTC" duration-ms="20896" status="SKIP">
+          <exception class="java.lang.Exception">
             <message>
-              <![CDATA[expected [All fields are required.] but found []]]>
+              <![CDATA[java.lang.Exception: Not able to find element ' Proxy element for: DefaultElementLocator 'By.id: password' '. Reason: org.openqa.selenium.NoSuchElementException: Unable to locate element: #password
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.27'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [8aebd250-96aa-49df-a9f0-61c99e6b1d11, findElement {using=id, value=password}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.0.4, moz:accessibilityChecks: false, moz:buildID: 20250707120347, moz:debuggerAddress: 127.0.0.1:6971, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.11.0-1018-azure, moz:processID: 2724, moz:profile: /tmp/rust_mozprofilePmTNQM, moz:shutdownTimeout: 60000, moz:webdriverClick: false, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://127.0.0.1:6971/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (X11; Linux x86...}
+Session ID: 8aebd250-96aa-49df-a9f0-61c99e6b1d11]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [All fields are required.] but found []
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at org.testng.asserts.Assertion$11.doAssert(Assertion.java:186)
-at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
-at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
-at org.testng.asserts.Assertion.assertEquals(Assertion.java:182)
-at com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest(LoginPageTest.java:50)
+              <![CDATA[java.lang.Exception: java.lang.Exception: Not able to find element ' Proxy element for: DefaultElementLocator 'By.id: password' '. Reason: org.openqa.selenium.NoSuchElementException: Unable to locate element: #password
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.27'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [8aebd250-96aa-49df-a9f0-61c99e6b1d11, findElement {using=id, value=password}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.0.4, moz:accessibilityChecks: false, moz:buildID: 20250707120347, moz:debuggerAddress: 127.0.0.1:6971, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.11.0-1018-azure, moz:processID: 2724, moz:profile: /tmp/rust_mozprofilePmTNQM, moz:shutdownTimeout: 60000, moz:webdriverClick: false, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://127.0.0.1:6971/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (X11; Linux x86...}
+Session ID: 8aebd250-96aa-49df-a9f0-61c99e6b1d11
+at com.qa.util.DriverActions.sendKeys(DriverActions.java:150)
+at com.qa.pages.LoginPage.InvalidLogin(LoginPage.java:45)
+at com.qa.testcases.LoginPageTest.InvalidLoginErrorTest(LoginPageTest.java:38)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -234,97 +197,43 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.Exception: Not able to find element ' Proxy element for: DefaultElementLocator 'By.id: password' '. Reason: org.openqa.selenium.NoSuchElementException: Unable to locate element: #password
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.27'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [8aebd250-96aa-49df-a9f0-61c99e6b1d11, findElement {using=id, value=password}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.0.4, moz:accessibilityChecks: false, moz:buildID: 20250707120347, moz:debuggerAddress: 127.0.0.1:6971, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.11.0-1018-azure, moz:processID: 2724, moz:profile: /tmp/rust_mozprofilePmTNQM, moz:shutdownTimeout: 60000, moz:webdriverClick: false, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://127.0.0.1:6971/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (X11; Linux x86...}
+Session ID: 8aebd250-96aa-49df-a9f0-61c99e6b1d11
+at com.qa.util.DriverActions.explicitlyWait(DriverActions.java:92)
+at com.qa.util.DriverActions.sendKeys(DriverActions.java:139)
+... 17 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginWithoutCredentialsErrorTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:51 UTC" name="tearDown" finished-at="2025-07-17T18:09:52 UTC" duration-ms="1251" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:51 UTC" name="tearDown" finished-at="2025-07-17T18:09:52 UTC" duration-ms="1217" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:52 UTC" name="setUpBase" finished-at="2025-07-17T18:09:57 UTC" duration-ms="4672" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=LoginPageTest.InvalidLoginErrorTest()[pri:1, instance:com.qa.testcases.LoginPageTest@4566d049] output={null}]]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[FireFox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBase -->
-        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:52 UTC" name="setUpBase" finished-at="2025-07-17T18:09:56 UTC" duration-ms="3983" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Exception]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=LoginPageTest.LoginWithoutCredentialsErrorTest()[pri:2, instance:com.qa.testcases.LoginPageTest@4566d049] output={null}]]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[FireFox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBase -->
-        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:56 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:09:56 UTC" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToLoginPage -->
-        <test-method signature="LoginWithoutCredentialsErrorTest()[pri:2, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:56 UTC" name="LoginWithoutCredentialsErrorTest" finished-at="2025-07-17T18:09:57 UTC" duration-ms="605" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginWithoutCredentialsErrorTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:57 UTC" name="tearDown" finished-at="2025-07-17T18:09:58 UTC" duration-ms="836" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:57 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:09:57 UTC" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToLoginPage -->
-        <test-method signature="InvalidLoginErrorTest()[pri:1, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:57 UTC" name="InvalidLoginErrorTest" finished-at="2025-07-17T18:09:58 UTC" duration-ms="1080" status="PASS">
+          </exception> <!-- java.lang.Exception -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidLoginErrorTest -->
-        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:58 UTC" name="setUpBase" finished-at="2025-07-17T18:10:01 UTC" duration-ms="3634" status="PASS">
+        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:16:53 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:16:53 UTC" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToLoginPage -->
+        <test-method signature="LoginWithoutCredentialsErrorTest()[pri:2, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:16:53 UTC" name="LoginWithoutCredentialsErrorTest" finished-at="2025-07-17T18:16:54 UTC" duration-ms="617" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginWithoutCredentialsErrorTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:16:54 UTC" name="tearDown" finished-at="2025-07-17T18:16:55 UTC" duration-ms="1136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:16:55 UTC" name="setUpBase" finished-at="2025-07-17T18:16:58 UTC" duration-ms="3069" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -345,11 +254,26 @@ at java.base/java.lang.Thread.run(Thread.java:829)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBase -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:58 UTC" name="tearDown" finished-at="2025-07-17T18:09:59 UTC" duration-ms="914" status="PASS">
+        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:16:58 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:16:58 UTC" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.testcases.LoginPageTest.ValidLoginTest() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToLoginPage -->
+        <test-method signature="ValidLoginTest()[pri:4, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:16:58 UTC" name="ValidLoginTest" finished-at="2025-07-17T18:17:01 UTC" duration-ms="3247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:17:01 UTC" name="tearDown" finished-at="2025-07-17T18:17:02 UTC" duration-ms="695" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:09:59 UTC" name="setUpBase" finished-at="2025-07-17T18:10:03 UTC" duration-ms="3990" status="PASS">
+        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:17:02 UTC" name="setUpBase" finished-at="2025-07-17T18:17:05 UTC" duration-ms="2951" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -370,22 +294,11 @@ at java.base/java.lang.Thread.run(Thread.java:829)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBase -->
-        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:10:01 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:10:01 UTC" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.testcases.LoginPageTest.ValidLoginTest() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="LogOutTest()[pri:5, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:17:05 UTC" name="LogOutTest" finished-at="2025-07-17T18:18:08 UTC" duration-ms="63396" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigateToLoginPage -->
-        <test-method signature="ValidLoginTest()[pri:4, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:10:01 UTC" name="ValidLoginTest" finished-at="2025-07-17T18:10:04 UTC" duration-ms="2985" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidLoginTest -->
-        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:10:03 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:10:03 UTC" duration-ms="1" status="PASS">
+        </test-method> <!-- LogOutTest -->
+        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:17:05 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:17:05 UTC" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -396,23 +309,15 @@ at java.base/java.lang.Thread.run(Thread.java:829)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToLoginPage -->
-        <test-method signature="LogOutTest()[pri:5, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:10:03 UTC" name="LogOutTest" finished-at="2025-07-17T18:10:07 UTC" duration-ms="3638" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogOutTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:10:04 UTC" name="tearDown" finished-at="2025-07-17T18:10:05 UTC" duration-ms="782" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:17:14 UTC" name="tearDown" finished-at="2025-07-17T18:17:15 UTC" duration-ms="844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:10:07 UTC" name="tearDown" finished-at="2025-07-17T18:10:08 UTC" duration-ms="846" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:17:14 UTC" name="tearDown" finished-at="2025-07-17T18:17:15 UTC" duration-ms="753" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:10:11 UTC" name="tearDown" finished-at="2025-07-17T18:10:12 UTC" duration-ms="681" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:10:12 UTC" name="setUpBase" finished-at="2025-07-17T18:10:15 UTC" duration-ms="2772" status="PASS">
+        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:17:15 UTC" name="setUpBase" finished-at="2025-07-17T18:17:19 UTC" duration-ms="3992" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -433,7 +338,28 @@ at java.base/java.lang.Thread.run(Thread.java:829)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBase -->
-        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:10:15 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:10:15 UTC" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUpBase(java.lang.reflect.Method,org.testng.ITestResult,java.lang.String)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:17:15 UTC" name="setUpBase" finished-at="2025-07-17T18:17:19 UTC" duration-ms="4810" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=LoginPageTest.InvalidLoginErrorTest()[pri:1, instance:com.qa.testcases.LoginPageTest@4566d049] output={null}]]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBase -->
+        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:17:19 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:17:19 UTC" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -444,11 +370,34 @@ at java.base/java.lang.Thread.run(Thread.java:829)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToLoginPage -->
-        <test-method signature="NeedHelpRedirectTest()[pri:3, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:10:15 UTC" name="NeedHelpRedirectTest" finished-at="2025-07-17T18:10:15 UTC" duration-ms="352" status="PASS">
+        <test-method signature="NeedHelpRedirectTest()[pri:3, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:17:19 UTC" name="NeedHelpRedirectTest" finished-at="2025-07-17T18:17:19 UTC" duration-ms="613" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NeedHelpRedirectTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:10:15 UTC" name="tearDown" finished-at="2025-07-17T18:10:16 UTC" duration-ms="685" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:17:19 UTC" name="tearDown" finished-at="2025-07-17T18:17:20 UTC" duration-ms="826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="navigateToLoginPage(java.lang.reflect.Method)[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:17:19 UTC" name="navigateToLoginPage" finished-at="2025-07-17T18:17:19 UTC" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToLoginPage -->
+        <test-method signature="InvalidLoginErrorTest()[pri:1, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:17:19 UTC" name="InvalidLoginErrorTest" finished-at="2025-07-17T18:17:20 UTC" duration-ms="1011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidLoginErrorTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:17:20 UTC" name="tearDown" finished-at="2025-07-17T18:17:21 UTC" duration-ms="702" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testcases.LoginPageTest@4566d049]" started-at="2025-07-17T18:18:08 UTC" name="tearDown" finished-at="2025-07-17T18:18:09 UTC" duration-ms="697" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
