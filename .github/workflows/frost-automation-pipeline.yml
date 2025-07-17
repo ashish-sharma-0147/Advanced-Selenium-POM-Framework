@@ -108,14 +108,8 @@ jobs:
         # Simulate the build step
         echo "Building branch ${{ inputs.Branch }} in environment $ENVIRONMENT_NAME using browser ${{ inputs.Select_Browser }}"
 
-        # Simulate a delay for testing purposes
-        sleep 10
-
-        # Capture the end time
-        END_TIME=$(date)
-
-        # Append the end time to the job summary
-        echo "- **End Time**: $END_TIME" >> $GITHUB_STEP_SUMMARY
+        # Export the start time as an environment variable for later use
+        echo "START_TIME=$START_TIME" >> $GITHUB_ENV
 
         # Compile Source Code
         mvn compile
@@ -148,3 +142,9 @@ jobs:
     - name: Display TestNG Results in Logs
       run: |
         cat TestReports/testng-results.xml
+        
+        # Capture the end time
+        END_TIME=$(date -u)
+
+        # Append the end time to the job summary
+        echo "- **End Time**: $END_TIME" >> $GITHUB_STEP_SUMMARY
