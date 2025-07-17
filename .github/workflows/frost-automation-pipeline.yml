@@ -133,7 +133,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
           name: TestNG-Report
-          path: target/surefire-reports/emailable-report.html
+          path: TestReports/
 
     - name: Display Test Summary in GitHub UI
       run: |
@@ -150,7 +150,7 @@ jobs:
         echo "- **Report**: [View HTML Report](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/index.html)" >> $GITHUB_STEP_SUMMARY
 
         chmod +x ./generate-ga-summary.sh
-          ./generate-ga-summary.sh target/surefire-reports/emailable-report.html
+          ./generate-ga-summary.sh TestReports/
 
     - name: Deploy Report to GitHub Pages
       if: always()
