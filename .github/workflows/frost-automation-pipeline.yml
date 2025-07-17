@@ -124,6 +124,11 @@ jobs:
         mv target/surefire-reports/testng-results.xml TestReports/ || true
         mv target/surefire-reports/*.html TestReports/ || true
 
+    - name: List Surefire Report Files
+      run: |
+          echo "Listing files under target/surefire-reports:"
+          ls -R target/surefire-reports || echo "No such directory"
+
     - name: Upload HTML Report
       uses: actions/upload-artifact@v4
       with:
