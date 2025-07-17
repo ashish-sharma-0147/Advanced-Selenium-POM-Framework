@@ -133,7 +133,13 @@ jobs:
           -Dparallel.execution.mode=${{ env.PARALLEL_EXECUTION_MODE }} \
           -Dparallel.execution.thread.count=${{ env.PARALLEL_EXECUTION_THREAD_COUNT }}
 
-         # Extract the final test summary from the Maven output
+         # Debug: Ensure the Maven output file exists
+        if [[ ! -f maven-output.log ]]; then
+          echo "Error: maven-output.log file was not created."
+          exit 1
+        fi
+
+        # Extract the final test summary from the Maven output
         TEST_SUMMARY=$(grep -E "\[INFO\] Tests run:" maven-output.log | tail -1)
 
         # Debug: Display the extracted test summary
