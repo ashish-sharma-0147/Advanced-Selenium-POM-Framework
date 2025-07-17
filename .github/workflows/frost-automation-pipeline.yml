@@ -92,16 +92,32 @@ jobs:
         # Extract the environment name from the URL
         ENVIRONMENT_NAME=$(echo "${{ inputs.Select_Environment }}" | sed -E 's|https://frost-([a-z]+).health.elsevier.com/|\1|' | tr '[:lower:]' '[:upper:]')
 
-        # Log the environment name and branch as a notice
-        echo "::notice title=Environment Details::Environment: $ENVIRONMENT_NAME, Branch: ${{ inputs.Branch }}"
+        # Capture the start time
+        START_TIME=$(date)
+
+        # Log the environment details as a notice
+        echo "::notice title=Environment Details::Environment: $ENVIRONMENT_NAME, URL: ${{ inputs.Select_Environment }}, Browser: ${{ inputs.Select_Browser }}"
 
         # Write environment details to the job summary
-        echo "### Environment Details" >> $GITHUB_STEP_SUMMARY
+        echo "### Test Execution Details" >> $GITHUB_STEP_SUMMARY
         echo "- **Environment**: $ENVIRONMENT_NAME" >> $GITHUB_STEP_SUMMARY
-        echo "- **Branch**: ${{ inputs.Branch }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **URL**: ${{ inputs.Select_Environment }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Browser**: ${{ inputs.Select_Browser }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Start Time**: $START_TIME" >> $GITHUB_STEP_SUMMARY
 
-        # Perform the build step
-        echo "Building branch ${{ inputs.Branch }} in environment ${{ inputs.Select_Environment }}" 
+        # Simulate the build step
+        echo "Building branch ${{ inputs.Branch }} in environment $ENVIRONMENT_NAME using browser ${{ inputs.Select_Browser }}"
+
+        # Simulate a delay for testing purposes
+        sleep 10
+
+        # Capture the end time
+        END_TIME=$(date)
+
+        # Append the end time to the job summary
+        echo "- **End Time**: $END_TIME" >> $GITHUB_STEP_SUMMARY
+
+        # Compile Source Code
         mvn compile
 
     - name: Test Execution
