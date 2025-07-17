@@ -124,6 +124,12 @@ jobs:
         mv target/surefire-reports/testng-results.xml TestReports/ || true
         mv target/surefire-reports/*.html TestReports/ || true
 
+    - name: Upload HTML Report
+      uses: actions/upload-artifact@v4
+      with:
+          name: TestNG-Report
+          path: target/surefire-reports/emailable-report.html
+
     - name: Display Test Summary in GitHub UI
       run: |
         passed=$(grep -oP 'passed="\K[0-9]+' TestReports/testng-results.xml || echo "0")
@@ -137,6 +143,9 @@ jobs:
         echo "- ⚠️ Skipped: $skipped" >> $GITHUB_STEP_SUMMARY
         echo "- **End Time**: $END_TIME" >> $GITHUB_STEP_SUMMARY
         echo "- **Report**: [View HTML Report](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/index.html)" >> $GITHUB_STEP_SUMMARY
+
+        chmod +x .github/scripts/generate-summary.sh
+          .github/scripts/generate-summary.sh target/surefire-reports/emailable-report.html
 
     - name: Deploy Report to GitHub Pages
       if: always()
