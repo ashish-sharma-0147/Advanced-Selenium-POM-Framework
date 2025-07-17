@@ -123,14 +123,6 @@ jobs:
 
     - name: Test Execution
       run: |
-        # Debug: Display the current working directory
-        echo "Current working directory:"
-        pwd
-
-        # Debug: List all files in the current directory before running Maven
-        echo "Files in the current directory before running Maven:"
-        ls -la
-      
         mvn test \
           -Dapplication.url=${{ env.APPLICATION_URL }} \
           -Dusername=${{ env.FROST_USERNAME }} \
@@ -139,20 +131,7 @@ jobs:
           -Dgroups=${{ env.GROUPS }} \
           -Dparallel.execution=${{ env.PARALLEL_EXECUTION }} \
           -Dparallel.execution.mode=${{ env.PARALLEL_EXECUTION_MODE }} \
-          -Dparallel.execution.thread.count=${{ env.PARALLEL_EXECUTION_THREAD_COUNT }} > maven-output.log
-
-        # Debug: Display the Maven output
-        echo "Maven Output:"
-        cat maven-output.log
-
-        # Extract the final test summary from the Maven output
-        TEST_SUMMARY=$(grep -E "\[INFO\] Tests run:" maven-output.log | tail -1)
-
-        # Debug: Display the extracted test summary
-        echo "Extracted Test Summary: $TEST_SUMMARY"
-
-        # Export the test summary as an environment variable for later use
-        echo "TEST_SUMMARY=$TEST_SUMMARY" >> $GITHUB_ENV
+          -Dparallel.execution.thread.count=${{ env.PARALLEL_EXECUTION_THREAD_COUNT }}
       continue-on-error: true # Allow the workflow to proceed even if this step fails
 
     - name: Generate Reports
@@ -176,9 +155,3 @@ jobs:
 
         # Append the end time to the job summary
         echo "- **End Time**: $END_TIME" >> $GITHUB_STEP_SUMMARY
-
-        # Append the test summary to the job summary
-        echo "### Test Summary" >> $GITHUB_STEP_SUMMARY
-        echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
-        echo "$TEST_SUMMARY" >> $GITHUB_STEP_SUMMARY
-        echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
