@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,  2 skipped,  5 passed</span>
+                    <span class="method-stats">8 methods,  3 skipped,  5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title skipped">Retried methods</span>
@@ -110,6 +110,11 @@
                       <span>
                         <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-FROST_UI_Automation_Suite" title="com.qa.testcases.LoginPageTest" class="method navigator-link" hash-for-method="LoginWithoutCredentialsErrorTest">LoginWithoutCredentialsErrorTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-FROST_UI_Automation_Suite" title="com.qa.testcases.LoginPageTest" class="method navigator-link" hash-for-method="NeedHelpRedirectTest">NeedHelpRedirectTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-FROST_UI_Automation_Suite -->
@@ -169,12 +174,22 @@
                   <a name="InvalidLoginErrorTest">
                   </a> <!-- InvalidLoginErrorTest -->
                   <span class="method-name">InvalidLoginErrorTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Login failed. Try again or contact your administrator.] but found []
-	at com.qa.testcases.LoginPageTest.InvalidLoginErrorTest(LoginPageTest.java:42)
+                  <div class="stack-trace">java.lang.Exception: Element Proxy element for: DefaultElementLocator &apos;By.xpath: //button[normalize-space()=&apos;Login&apos;]&apos; is not clickable because: java.lang.Exception: Not able to find element &apos; Proxy element for: DefaultElementLocator &apos;By.xpath: //button[normalize-space()=&apos;Login&apos;]&apos; &apos;. Reason: org.openqa.selenium.NoSuchElementException: Unable to locate element: //button[normalize-space()=&apos;Login&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.11.0-1018-azure&apos;, java.version: &apos;11.0.27&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [99f03df0-b3d6-40d3-a999-b4b9a512fc3c, findElement {value=//button[normalize-space()=&apos;Login&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.0.4, moz:accessibilityChecks: false, moz:buildID: 20250707120347, moz:debuggerAddress: 127.0.0.1:1025, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.11.0-1018-azure, moz:processID: 2731, moz:profile: /tmp/rust_mozprofileQexGXI, moz:shutdownTimeout: 60000, moz:webdriverClick: false, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://127.0.0.1:1025/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (X11; Linux x86...}
+Session ID: 99f03df0-b3d6-40d3-a999-b4b9a512fc3c
+	at com.qa.util.DriverActions.click(DriverActions.java:105)
+	at com.qa.pages.LoginPage.clickLogin(LoginPage.java:56)
+	at com.qa.pages.LoginPage.InvalidLogin(LoginPage.java:46)
+	at com.qa.testcases.LoginPageTest.InvalidLoginErrorTest(LoginPageTest.java:38)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-... Removed 22 stack frames
+... Removed 12 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -185,6 +200,20 @@
                   <span class="method-name">LoginWithoutCredentialsErrorTest</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [All fields are required.] but found []
 	at com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest(LoginPageTest.java:50)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NeedHelpRedirectTest">
+                  </a> <!-- NeedHelpRedirectTest -->
+                  <span class="method-name">NeedHelpRedirectTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Forgot Password] but found []
+	at com.qa.testcases.LoginPageTest.NeedHelpRedirectTest(LoginPageTest.java:58)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -368,40 +397,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'LogOutTest')
+data.setCell(0, 1, 'LoginWithoutCredentialsErrorTest')
 data.setCell(0, 2, 'com.qa.testcases.LoginPageTest')
-data.setCell(0, 3, 5189);
+data.setCell(0, 3, 20918);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'ValidLoginTest')
+data.setCell(1, 1, 'InvalidLoginErrorTest')
 data.setCell(1, 2, 'com.qa.testcases.LoginPageTest')
-data.setCell(1, 3, 4629);
+data.setCell(1, 3, 20917);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'LoginWithoutCredentialsErrorTest')
+data.setCell(2, 1, 'NeedHelpRedirectTest')
 data.setCell(2, 2, 'com.qa.testcases.LoginPageTest')
-data.setCell(2, 3, 2525);
+data.setCell(2, 3, 20857);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'InvalidLoginErrorTest')
+data.setCell(3, 1, 'LogOutTest')
 data.setCell(3, 2, 'com.qa.testcases.LoginPageTest')
-data.setCell(3, 3, 2524);
+data.setCell(3, 3, 5509);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'InvalidLoginErrorTest')
+data.setCell(4, 1, 'ValidLoginTest')
 data.setCell(4, 2, 'com.qa.testcases.LoginPageTest')
-data.setCell(4, 3, 1929);
+data.setCell(4, 3, 4315);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'NeedHelpRedirectTest')
+data.setCell(5, 1, 'InvalidLoginErrorTest')
 data.setCell(5, 2, 'com.qa.testcases.LoginPageTest')
-data.setCell(5, 3, 1381);
+data.setCell(5, 3, 2194);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'LoginWithoutCredentialsErrorTest')
 data.setCell(6, 2, 'com.qa.testcases.LoginPageTest')
-data.setCell(6, 3, 378);
+data.setCell(6, 3, 628);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'NeedHelpRedirectTest')
+data.setCell(7, 2, 'com.qa.testcases.LoginPageTest')
+data.setCell(7, 3, 398);
 window.suiteTableData['FROST_UI_Automation_Suite']= { tableData: data, tableDiv: 'times-div-FROST_UI_Automation_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-FROST_UI_Automation_Suite">
               </div> <!-- times-div-FROST_UI_Automation_Suite -->
             </div> <!-- times-div -->
@@ -629,116 +662,132 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Excep...)</span>
-                <span class="method-start">592 ms</span>
+                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.NeedHelpRedirectTest() throws java.lang.Exception, [TestR...)</span>
+                <span class="method-start">596 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception, [Test...)</span>
-                <span class="method-start">592 ms</span>
+                <span class="method-start">597 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Excep...)</span>
+                <span class="method-start">597 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception)</span>
+                <span class="method-start">23189 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.NeedHelpRedirectTest() throws java.lang.Exception)</span>
+                <span class="method-start">23192 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Excep...)</span>
+                <span class="method-start">23207 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LoginWithoutCredentialsErrorTest</span>
+                <span class="method-start">23229 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NeedHelpRedirectTest</span>
+                <span class="method-start">23230 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">InvalidLoginErrorTest</span>
+                <span class="method-start">23236 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">44293 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">44343 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">44414 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception, [Test...)</span>
+                <span class="method-start">45430 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Excep...)</span>
+                <span class="method-start">45461 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.NeedHelpRedirectTest() throws java.lang.Exception, [TestR...)</span>
-                <span class="method-start">592 ms</span>
+                <span class="method-start">45479 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception)</span>
-                <span class="method-start">23765 ms</span>
+                <span class="method-start">50965 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">InvalidLoginErrorTest</span>
+                <span class="method-start">50969 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Excep...)</span>
-                <span class="method-start">23789 ms</span>
+                <span class="method-start">51762 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginWithoutCredentialsErrorTest</span>
-                <span class="method-start">23803 ms</span>
+                <span class="method-start">51766 ms</span>
               </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">InvalidLoginErrorTest</span>
-                <span class="method-start">23804 ms</span>
-              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">52395 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.NeedHelpRedirectTest() throws java.lang.Exception)</span>
-                <span class="method-start">23809 ms</span>
+                <span class="method-start">52563 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">NeedHelpRedirectTest</span>
-                <span class="method-start">23810 ms</span>
+                <span class="method-start">52564 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">25194 ms</span>
+                <span class="method-start">52966 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">53163 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.ValidLoginTest() throws java.lang.Exception, [TestResult ...)</span>
-                <span class="method-start">26329 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">26383 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">26427 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception, [Test...)</span>
-                <span class="method-start">27326 ms</span>
+                <span class="method-start">53344 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Excep...)</span>
-                <span class="method-start">27521 ms</span>
+                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.LogOutTest() throws java.lang.Exception, [TestResult name...)</span>
+                <span class="method-start">53956 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.ValidLoginTest() throws java.lang.Exception)</span>
-                <span class="method-start">31252 ms</span>
+                <span class="method-start">57160 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ValidLoginTest</span>
-                <span class="method-start">31253 ms</span>
+                <span class="method-start">57161 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception)</span>
-                <span class="method-start">32942 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">InvalidLoginErrorTest</span>
-                <span class="method-start">32943 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Excep...)</span>
-                <span class="method-start">33747 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">LoginWithoutCredentialsErrorTest</span>
-                <span class="method-start">33748 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">34126 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">34872 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.LogOutTest() throws java.lang.Exception, [TestResult name...)</span>
-                <span class="method-start">34909 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">35883 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.LogOutTest() throws java.lang.Exception)</span>
-                <span class="method-start">38126 ms</span>
+                <span class="method-start">58135 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LogOutTest</span>
-                <span class="method-start">38127 ms</span>
+                <span class="method-start">58136 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">43316 ms</span>
+                <span class="method-start">61476 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">63646 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
