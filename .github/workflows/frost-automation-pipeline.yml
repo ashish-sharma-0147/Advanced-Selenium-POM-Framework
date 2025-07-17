@@ -123,6 +123,14 @@ jobs:
 
     - name: Test Execution
       run: |
+        # Debug: Display the current working directory
+        echo "Current working directory:"
+        pwd
+
+        # Debug: List all files in the current directory before running Maven
+        echo "Files in the current directory before running Maven:"
+        ls -la
+      
         mvn test \
           -Dapplication.url=${{ env.APPLICATION_URL }} \
           -Dusername=${{ env.FROST_USERNAME }} \
@@ -133,11 +141,23 @@ jobs:
           -Dparallel.execution.mode=${{ env.PARALLEL_EXECUTION_MODE }} \
           -Dparallel.execution.thread.count=${{ env.PARALLEL_EXECUTION_THREAD_COUNT }}
 
-         # Debug: Ensure the Maven output file exists
+         # Debug: List all files in the current directory after running Maven
+        echo "Files in the current directory after running Maven:"
+        ls -la
+
+        # Debug: Ensure the Maven output file exists
         if [[ ! -f maven-output.log ]]; then
-          echo "Error: maven-output.log file was not created."
-          exit 1
+          echo "Error: maven-output.log file was not created. Falling back to capturing Maven output directly."
+          mvn test \
+            -Dapplication.url=${{ inputs.Select_Environment }} \
+            -Dusername=${{ inputs.Frost_Username }} \
+            -Dpassword=${{ inputs.Frost_Password }} \
+            -Dbrowser=${{ inputs.Select_Browser }} > maven-output.log
         fi
+
+        # Debug: Display the Maven output
+        echo "Maven Output:"
+        cat maven-output.log
 
         # Extract the final test summary from the Maven output
         TEST_SUMMARY=$(grep -E "\[INFO\] Tests run:" maven-output.log | tail -1)
