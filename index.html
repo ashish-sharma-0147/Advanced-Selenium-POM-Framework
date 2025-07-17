@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-FROST_UI_Automation_Suite" class="navigator-link">
+              <span class="suite-name border-skipped">FROST UI Automation Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-FROST_UI_Automation_Suite" class="navigator-link ">
+                    <span>testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-FROST_UI_Automation_Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-FROST_UI_Automation_Suite" class="navigator-link ">
+                    <span>3 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-FROST_UI_Automation_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-FROST_UI_Automation_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-FROST_UI_Automation_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-FROST_UI_Automation_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">6 methods,  1 skipped,  5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-FROST_UI_Automation_Suite" class="hide-methods skipped suite-FROST_UI_Automation_Suite"> (hide)</a> <!-- hide-methods skipped suite-FROST_UI_Automation_Suite -->
+                      <a href="#" panel-name="suite-FROST_UI_Automation_Suite" class="show-methods skipped suite-FROST_UI_Automation_Suite"> (show)</a> <!-- show-methods skipped suite-FROST_UI_Automation_Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-FROST_UI_Automation_Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-FROST_UI_Automation_Suite" title="com.qa.testcases.LoginPageTest" class="method navigator-link" hash-for-method="LoginWithoutCredentialsErrorTest">LoginWithoutCredentialsErrorTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-FROST_UI_Automation_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-FROST_UI_Automation_Suite" class="hide-methods passed suite-FROST_UI_Automation_Suite"> (hide)</a> <!-- hide-methods passed suite-FROST_UI_Automation_Suite -->
+                      <a href="#" panel-name="suite-FROST_UI_Automation_Suite" class="show-methods passed suite-FROST_UI_Automation_Suite"> (show)</a> <!-- show-methods passed suite-FROST_UI_Automation_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-FROST_UI_Automation_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FROST_UI_Automation_Suite" title="com.qa.testcases.LoginPageTest" class="method navigator-link" hash-for-method="InvalidLoginErrorTest">InvalidLoginErrorTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FROST_UI_Automation_Suite" title="com.qa.testcases.LoginPageTest" class="method navigator-link" hash-for-method="LogOutTest">LogOutTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FROST_UI_Automation_Suite" title="com.qa.testcases.LoginPageTest" class="method navigator-link" hash-for-method="LoginWithoutCredentialsErrorTest">LoginWithoutCredentialsErrorTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FROST_UI_Automation_Suite" title="com.qa.testcases.LoginPageTest" class="method navigator-link" hash-for-method="NeedHelpRedirectTest">NeedHelpRedirectTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FROST_UI_Automation_Suite" title="com.qa.testcases.LoginPageTest" class="method navigator-link" hash-for-method="ValidLoginTest">ValidLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-FROST_UI_Automation_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-FROST_UI_Automation_Suite" class="panel FROST_UI_Automation_Suite">
+          <div class="suite-FROST_UI_Automation_Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.qa.testcases.LoginPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginWithoutCredentialsErrorTest">
+                  </a> <!-- LoginWithoutCredentialsErrorTest -->
+                  <span class="method-name">LoginWithoutCredentialsErrorTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [All fields are required.] but found []
+	at com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest(LoginPageTest.java:50)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-FROST_UI_Automation_Suite-class-skipped -->
+          <div class="suite-FROST_UI_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.testcases.LoginPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="InvalidLoginErrorTest">
+                  </a> <!-- InvalidLoginErrorTest -->
+                  <span class="method-name">InvalidLoginErrorTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LogOutTest">
+                  </a> <!-- LogOutTest -->
+                  <span class="method-name">LogOutTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginWithoutCredentialsErrorTest">
+                  </a> <!-- LoginWithoutCredentialsErrorTest -->
+                  <span class="method-name">LoginWithoutCredentialsErrorTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NeedHelpRedirectTest">
+                  </a> <!-- NeedHelpRedirectTest -->
+                  <span class="method-name">NeedHelpRedirectTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidLoginTest">
+                  </a> <!-- ValidLoginTest -->
+                  <span class="method-name">ValidLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-FROST_UI_Automation_Suite-class-passed -->
+        </div> <!-- panel FROST_UI_Automation_Suite -->
+        <div panel-name="test-xml-FROST_UI_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/home/runner/work/Advanced-Selenium-POM-Framework/Advanced-Selenium-POM-Framework/src/main/resources/Suites/testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite configfailurepolicy=&quot;continue&quot; thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;FROST UI Automation Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;groups&gt;
+    &lt;run&gt;
+      &lt;include name=&quot;Login&quot;/&gt;
+    &lt;/run&gt;
+  &lt;/groups&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.qa.listeners.TestListener&quot;/&gt;
+    &lt;listener class-name=&quot;com.qa.listeners.AnnotationTransformer&quot;/&gt;
+    &lt;listener class-name=&quot;com.qa.listeners.AlterSuiteListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;UI Test Cases&quot; verbose=&quot;0&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;Login&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.qa.testcases.LoginPageTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.testcases.CreateProjectPageTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.testcases.DashboardPageTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.testcases.EditTOCPageTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.testcases.BuildingBlocksPageTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.testcases.LORpageTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.testcases.MetaDataPageTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.testcases.AdministrationPageTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.testcases.ProjectUsageDashboardPageTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.testcases.GlossaryPageTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.testcases.CourseEditorPageTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.testcases.ExportPageTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.testcases.AssessmentQuestionDetailsPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- UI Test Cases --&gt;
+&lt;/suite&gt; &lt;!-- FROST UI Automation Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-FROST_UI_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for FROST UI Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">UI Test Cases (13 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-FROST_UI_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for FROST UI Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">Login</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">InvalidLoginErrorTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">LogOutTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">LoginWithoutCredentialsErrorTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">NeedHelpRedirectTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">ValidLoginTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">InvalidLoginErrorTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">LoginWithoutCredentialsErrorTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">NeedHelpRedirectTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">sanity</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">LogOutTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">ValidLoginTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-FROST_UI_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for FROST UI Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_FROST_UI_Automation_Suite');
+function tableData_FROST_UI_Automation_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(6);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'LogOutTest')
+data.setCell(0, 2, 'com.qa.testcases.LoginPageTest')
+data.setCell(0, 3, 64189);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'ValidLoginTest')
+data.setCell(1, 2, 'com.qa.testcases.LoginPageTest')
+data.setCell(1, 3, 3710);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'LoginWithoutCredentialsErrorTest')
+data.setCell(2, 2, 'com.qa.testcases.LoginPageTest')
+data.setCell(2, 3, 2104);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'InvalidLoginErrorTest')
+data.setCell(3, 2, 'com.qa.testcases.LoginPageTest')
+data.setCell(3, 3, 1253);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'NeedHelpRedirectTest')
+data.setCell(4, 2, 'com.qa.testcases.LoginPageTest')
+data.setCell(4, 3, 629);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'LoginWithoutCredentialsErrorTest')
+data.setCell(5, 2, 'com.qa.testcases.LoginPageTest')
+data.setCell(5, 3, 432);
+window.suiteTableData['FROST_UI_Automation_Suite']= { tableData: data, tableDiv: 'times-div-FROST_UI_Automation_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-FROST_UI_Automation_Suite">
+              </div> <!-- times-div-FROST_UI_Automation_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-FROST_UI_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for FROST UI Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-FROST_UI_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">68 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.qa.testcases.ExportPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">verifyExportListing</span>
+                <br/>
+                <span class="ignored-method-name">prepareSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.qa.testcases.DashboardPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">createNewProjectRedirectionTest</span>
+                <br/>
+                <span class="ignored-method-name">prepareSuite</span>
+                <br/>
+                <span class="ignored-method-name">LORRedirection</span>
+                <br/>
+                <span class="ignored-method-name">AdminSettingsRedirection</span>
+                <br/>
+                <span class="ignored-method-name">BuildingBlocksRedirection</span>
+                <br/>
+                <span class="ignored-method-name">projectTypeFilterListing</span>
+                <br/>
+                <span class="ignored-method-name">AdministrationRedirection</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.qa.testcases.CourseEditorPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">addEditDeleteExpositoryImage</span>
+                <br/>
+                <span class="ignored-method-name">addEditPreviewHotSpot</span>
+                <br/>
+                <span class="ignored-method-name">brightCoveWidgetVideoPlayer</span>
+                <br/>
+                <span class="ignored-method-name">prepareSuite</span>
+                <br/>
+                <span class="ignored-method-name">updateNodeTitle</span>
+                <br/>
+                <span class="ignored-method-name">accordionOsmosisVideoPlayer</span>
+                <br/>
+                <span class="ignored-method-name">accordionBrightCovePlayer</span>
+                <br/>
+                <span class="ignored-method-name">editorOsmosisVideoPlayer</span>
+                <br/>
+                <span class="ignored-method-name">verifyContentScreenVersioning</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.qa.testcases.ProjectUsageDashboardPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">verifyWidgetListing</span>
+                <br/>
+                <span class="ignored-method-name">verifyAssessmentWidgetListingAndMappedAssessmentCount</span>
+                <br/>
+                <span class="ignored-method-name">verifyUsersWidgetListing</span>
+                <br/>
+                <span class="ignored-method-name">verifyAssetsListing</span>
+                <br/>
+                <span class="ignored-method-name">prepareSuite</span>
+                <br/>
+                <span class="ignored-method-name">commentFilterAndListing</span>
+                <br/>
+                <span class="ignored-method-name">verifyTocNodeCounts</span>
+                <br/>
+                <span class="ignored-method-name">taskFilterAndListing</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.qa.testcases.EditTOCPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">uploadAssetandCreateResourceNode</span>
+                <br/>
+                <span class="ignored-method-name">prepareSuite</span>
+                <br/>
+                <span class="ignored-method-name">projectPreview</span>
+                <br/>
+                <span class="ignored-method-name">verifyAlertsForContentScreens</span>
+                <br/>
+                <span class="ignored-method-name">createAndUpdateNodes</span>
+                <br/>
+                <span class="ignored-method-name">LORPublish</span>
+                <br/>
+                <span class="ignored-method-name">importTocPackage</span>
+                <br/>
+                <span class="ignored-method-name">projectExportTOCSummary</span>
+                <br/>
+                <span class="ignored-method-name">verifyAlertsForAssessments</span>
+                <br/>
+                <span class="ignored-method-name">contentScreenTestView</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.qa.testcases.AdministrationPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">organizationManagementTest</span>
+                <br/>
+                <span class="ignored-method-name">userCreationEmailNotificationTest</span>
+                <br/>
+                <span class="ignored-method-name">prepareSuite</span>
+                <br/>
+                <span class="ignored-method-name">assignModuleToUser</span>
+                <br/>
+                <span class="ignored-method-name">userManagementTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.qa.testcases.LORpageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">prepareSuite</span>
+                <br/>
+                <span class="ignored-method-name">uploadFileTest</span>
+                <br/>
+                <span class="ignored-method-name">verifyThumbnails</span>
+                <br/>
+                <span class="ignored-method-name">contentPreviewTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.qa.testcases.GlossaryPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">prepareSuite</span>
+                <br/>
+                <span class="ignored-method-name">glossaryManagement</span>
+                <br/>
+                <span class="ignored-method-name">linkTextWithGlossaryTerm</span>
+                <br/>
+                <span class="ignored-method-name">createViewDeleteLinkedTerm</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.qa.testcases.AssessmentQuestionDetailsPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">prepareSuite</span>
+                <br/>
+                <span class="ignored-method-name">verifyAssessmentQuestionDetailsPageTasksAndComments</span>
+                <br/>
+                <span class="ignored-method-name">verifyUUIDandVTWID</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.qa.testcases.MetaDataPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">createLinkDeleteKeyValuePair</span>
+                <br/>
+                <span class="ignored-method-name">prepareSuite</span>
+                <br/>
+                <span class="ignored-method-name">createLinkDeleteTag</span>
+                <br/>
+                <span class="ignored-method-name">createLinkDeleteTaxonomy</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.qa.testcases.BuildingBlocksPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">createGlobalTemplate</span>
+                <br/>
+                <span class="ignored-method-name">prepareSuite</span>
+                <br/>
+                <span class="ignored-method-name">createGlobalEDUPUBpattern</span>
+                <br/>
+                <span class="ignored-method-name">searchWidget</span>
+                <br/>
+                <span class="ignored-method-name">createGlobalOnlineCoursePattern</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.qa.testcases.CreateProjectPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">createAdaptiveLearningProject</span>
+                <br/>
+                <span class="ignored-method-name">prepareSuite</span>
+                <br/>
+                <span class="ignored-method-name">createEDUPUBProject</span>
+                <br/>
+                <span class="ignored-method-name">createBookOrganizedProject</span>
+                <br/>
+                <span class="ignored-method-name">createObjectiveOrganizedProject</span>
+                <br/>
+                <span class="ignored-method-name">editProject</span>
+                <br/>
+                <span class="ignored-method-name">createEvolveResourcesProject</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-FROST_UI_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.testcases.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">prepareSuite(FireFox)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.NeedHelpRedirectTest() throws java.lang.Exception, [TestR...)</span>
+                <span class="method-start">594 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception, [Test...)</span>
+                <span class="method-start">594 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Excep...)</span>
+                <span class="method-start">594 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Excep...)</span>
+                <span class="method-start">30050 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LoginWithoutCredentialsErrorTest</span>
+                <span class="method-start">30087 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.InvalidLoginErrorTest() throws java.lang.Exception)</span>
+                <span class="method-start">30111 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">InvalidLoginErrorTest</span>
+                <span class="method-start">30114 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.NeedHelpRedirectTest() throws java.lang.Exception)</span>
+                <span class="method-start">30160 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NeedHelpRedirectTest</span>
+                <span class="method-start">30161 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">30793 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">31367 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.ValidLoginTest() throws java.lang.Exception, [TestResult ...)</span>
+                <span class="method-start">32106 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.LogOutTest() throws java.lang.Exception, [TestResult name...)</span>
+                <span class="method-start">32206 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">32252 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpBase(public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Excep...)</span>
+                <span class="method-start">33249 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.ValidLoginTest() throws java.lang.Exception)</span>
+                <span class="method-start">37338 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">ValidLoginTest</span>
+                <span class="method-start">37339 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.LogOutTest() throws java.lang.Exception)</span>
+                <span class="method-start">38362 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LogOutTest</span>
+                <span class="method-start">38363 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">navigateToLoginPage(public void com.qa.testcases.LoginPageTest.LoginWithoutCredentialsErrorTest() throws java.lang.Excep...)</span>
+                <span class="method-start">39105 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LoginWithoutCredentialsErrorTest</span>
+                <span class="method-start">39106 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">39538 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">41050 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">102552 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
