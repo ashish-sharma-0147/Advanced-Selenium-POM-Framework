@@ -43,7 +43,7 @@ on:
           - "Yes"
           - "No"
       Parallel_Execution_Mode:
-        description: "Please select the Parallel Execution Mode"
+        description: "Please select the Parallel Execution Mode. Must be 'NONE' if Parallel Execution is 'No'"
         default: "NONE"
         required: true
         type: choice
@@ -54,9 +54,16 @@ on:
           - "TESTS"
           - "NONE"
       Parallel_Execution_Thread_Count:
-        description: "Please select the Parallel Execution Thread Count"
+        description: "Please select the Parallel Execution Thread Count. Recommended to limit to 3 if Parallel Execution is 'Yes'. Must be '1' if Parallel Execution is 'No'."
         default: "1"
         required: true
+        type: choice
+        options:
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+          - "5"
 
 jobs:
   frost-pipeline:
