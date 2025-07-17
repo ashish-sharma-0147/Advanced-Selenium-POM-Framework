@@ -144,8 +144,8 @@ jobs:
         echo "- **End Time**: $END_TIME" >> $GITHUB_STEP_SUMMARY
         echo "- **Report**: [View HTML Report](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/index.html)" >> $GITHUB_STEP_SUMMARY
 
-        chmod +x .github/scripts/generate-summary.sh
-          .github/scripts/generate-summary.sh target/surefire-reports/emailable-report.html
+        chmod +x ./generate-summary.sh
+          ./generate-summary.sh target/surefire-reports/emailable-report.html
 
     - name: Deploy Report to GitHub Pages
       if: always()
