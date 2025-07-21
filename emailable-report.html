@@ -9,46 +9,10 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">FROST UI Automation Suite</th></tr>
-<tr><td><a href="#t0">UI Test Cases</a></td><td class="num">5</td><td class="num">0</td><td class="num attn">2</td><td class="num">0</td><td class="num">105,496</td><td>Login</td><td></td></tr>
+<tr><td><a href="#t0">UI Test Cases</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">55,003</td><td>publish</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">FROST UI Automation Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">UI Test Cases &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="2">com.qa.testcases.LoginPageTest</td><td><a href="#m0">InvalidLoginErrorTest</a></td><td rowspan="1">1752776213375</td><td rowspan="1">20896</td></tr><tr class="retriedeven"><td><a href="#m1">NeedHelpRedirectTest</a></td><td rowspan="1">1752776213374</td><td rowspan="1">20969</td></tr><tr><th colspan="4">UI Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">com.qa.testcases.LoginPageTest</td><td><a href="#m2">InvalidLoginErrorTest</a></td><td rowspan="1">1752776239961</td><td rowspan="1">1011</td></tr><tr class="passedeven"><td><a href="#m3">LogOutTest</a></td><td rowspan="1">1752776225219</td><td rowspan="1">63396</td></tr><tr class="passedeven"><td><a href="#m4">LoginWithoutCredentialsErrorTest</a></td><td rowspan="1">1752776213496</td><td rowspan="1">617</td></tr><tr class="passedeven"><td><a href="#m5">NeedHelpRedirectTest</a></td><td rowspan="1">1752776239120</td><td rowspan="1">613</td></tr><tr class="passedeven"><td><a href="#m6">ValidLoginTest</a></td><td rowspan="1">1752776218324</td><td rowspan="1">3247</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">FROST UI Automation Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">UI Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.qa.testcases.EditTOCPageTest</td><td><a href="#m0">LORPublish</a></td><td rowspan="1">1753101788399</td><td rowspan="1">21090</td></tr></tbody>
 </table>
-<h2>UI Test Cases</h2><h3 id="m0">com.qa.testcases.LoginPageTest#InvalidLoginErrorTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: java.lang.Exception: Not able to find element &apos; Proxy element for: DefaultElementLocator &apos;By.id: password&apos; &apos;. Reason: org.openqa.selenium.NoSuchElementException: Unable to locate element: #password
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.11.0-1018-azure&apos;, java.version: &apos;11.0.27&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [8aebd250-96aa-49df-a9f0-61c99e6b1d11, findElement {using=id, value=password}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.0.4, moz:accessibilityChecks: false, moz:buildID: 20250707120347, moz:debuggerAddress: 127.0.0.1:6971, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.11.0-1018-azure, moz:processID: 2724, moz:profile: /tmp/rust_mozprofilePmTNQM, moz:shutdownTimeout: 60000, moz:webdriverClick: false, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://127.0.0.1:6971/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (X11; Linux x86...}
-Session ID: 8aebd250-96aa-49df-a9f0-61c99e6b1d11
-	at com.qa.util.DriverActions.sendKeys(DriverActions.java:150)
-	at com.qa.pages.LoginPage.InvalidLogin(LoginPage.java:45)
-	at com.qa.testcases.LoginPageTest.InvalidLoginErrorTest(LoginPageTest.java:38)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-Caused by: java.lang.Exception: Not able to find element &apos; Proxy element for: DefaultElementLocator &apos;By.id: password&apos; &apos;. Reason: org.openqa.selenium.NoSuchElementException: Unable to locate element: #password
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.11.0-1018-azure&apos;, java.version: &apos;11.0.27&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [8aebd250-96aa-49df-a9f0-61c99e6b1d11, findElement {using=id, value=password}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 140.0.4, moz:accessibilityChecks: false, moz:buildID: 20250707120347, moz:debuggerAddress: 127.0.0.1:6971, moz:geckodriverVersion: 0.36.0, moz:headless: true, moz:platformVersion: 6.11.0-1018-azure, moz:processID: 2724, moz:profile: /tmp/rust_mozprofilePmTNQM, moz:shutdownTimeout: 60000, moz:webdriverClick: false, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://127.0.0.1:6971/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (X11; Linux x86...}
-Session ID: 8aebd250-96aa-49df-a9f0-61c99e6b1d11
-	at com.qa.util.DriverActions.explicitlyWait(DriverActions.java:92)
-	at com.qa.util.DriverActions.sendKeys(DriverActions.java:139)
-	... 17 more
-... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.qa.testcases.LoginPageTest#NeedHelpRedirectTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Forgot Password] but found []
-	at com.qa.testcases.LoginPageTest.NeedHelpRedirectTest(LoginPageTest.java:58)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.qa.testcases.LoginPageTest#InvalidLoginErrorTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.qa.testcases.LoginPageTest#LogOutTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.qa.testcases.LoginPageTest#LoginWithoutCredentialsErrorTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.qa.testcases.LoginPageTest#NeedHelpRedirectTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.qa.testcases.LoginPageTest#ValidLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>UI Test Cases</h2><h3 id="m0">com.qa.testcases.EditTOCPageTest#LORPublish</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
